@@ -1,0 +1,101 @@
+/* ==========================================================
+   1. TOKENS
+   Valores de la guía de estilo. Se definen una sola vez
+   y se usan en todo el CSS con var(--nombre).
+   ========================================================== */
+:root {
+  /* Colores */
+  --tpo-black: #111111;
+  --tpo-white: #FFFFFF;
+  --tpo-graphite: #272727;
+  --tpo-soft-grey: #F4F4F2;
+  --tpo-line-grey: #D9D9D6;
+  --tpo-signal: #FF4D00;
+  --tpo-on-signal: #111111;
+
+  /* Tipografía */
+  --font-brand: Arial, Helvetica, sans-serif;
+  --font-ui: 'Space Grotesk', Arial, sans-serif;
+
+  /* Espaciado */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Bordes y movimiento */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --motion-fast: 150ms;
+  --motion-base: 220ms;
+}
+
+/* ==========================================================
+   2. BASE
+   Normaliza las diferencias entre navegadores y fija
+   los estilos por defecto de la página.
+   ========================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--tpo-black);
+  background-color: var(--tpo-white);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 var(--space-4);
+  line-height: 1.1;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 var(--space-4);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+/* Foco visible al navegar con teclado (guía, sección 20) */
+:focus-visible {
+  outline: 2px solid var(--tpo-signal);
+  outline-offset: 2px;
+}
+
+/* Respeta a quien pide reducir animaciones (guía, sección 9.12) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

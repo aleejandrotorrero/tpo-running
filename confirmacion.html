@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmación de Pedido · TPO.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" data-nav="header" data-nav-item="logo">TPO.</a>
+
+      <nav class="site-nav" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="productos.html?categoria=calzado" class="site-nav__link" data-nav="header" data-nav-item="calzado">Calzado</a></li>
+          <li><a href="productos.html?categoria=ropa" class="site-nav__link" data-nav="header" data-nav-item="ropa">Ropa</a></li>
+          <li><a href="productos.html?categoria=accesorios" class="site-nav__link" data-nav="header" data-nav-item="accesorios">Accesorios</a></li>
+          <li><a href="productos.html?categoria=nutricion" class="site-nav__link" data-nav="header" data-nav-item="nutricion">Nutrición</a></li>
+          <li><a href="productos.html?filtro=ofertas" class="site-nav__link" data-nav="header" data-nav-item="ofertas">Ofertas</a></li>
+        </ul>
+      </nav>
+
+      <a href="carrito.html" class="site-header__cart" data-nav="header" data-nav-item="carrito">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M5 8h14l-1 12H6L5 8z" />
+          <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+        </svg>
+        <span class="visually-hidden">Carrito,</span>
+        <span class="site-header__cart-count" data-cart-count>0</span>
+        <span class="visually-hidden">productos</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <h1>Confirmación de Pedido</h1>
+      <p>Gracias por tu compra. Tu pedido ha sido confirmado.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-footer__brand">TPO.</p>
+      <p class="site-footer__slogan">Run your rhythm.</p>
+
+      <nav aria-label="Pie de página">
+        <ul class="site-footer__list">
+          <li><a href="productos.html?categoria=calzado" data-nav="footer" data-nav-item="calzado">Calzado</a></li>
+          <li><a href="productos.html?categoria=ropa" data-nav="footer" data-nav-item="ropa">Ropa</a></li>
+          <li><a href="productos.html?categoria=accesorios" data-nav="footer" data-nav-item="accesorios">Accesorios</a></li>
+          <li><a href="productos.html?categoria=nutricion" data-nav="footer" data-nav-item="nutricion">Nutrición</a></li>
+          <li><a href="productos.html?filtro=ofertas" data-nav="footer" data-nav-item="ofertas">Ofertas</a></li>
+        </ul>
+      </nav>
+
+      <p class="site-footer__legal">
+        Proyecto ficticio de portfolio con fines de aprendizaje. No se vende ningún producto.
+        Las marcas y nombres de producto citados pertenecen a sus respectivos propietarios.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/pages/productos.js"></script>
 </head>
 
 <body>
@@ -40,9 +41,37 @@
 
   <main class="site-main">
     <div class="container">
-      <h1>Productos</h1>
+      <h1 data-list-title>Productos</h1>
+      <p class="product-list__count" data-list-count></p>
+
+      <ul class="product-grid" data-product-list></ul>
+
+      <p class="product-list__empty" data-list-empty hidden>
+        No hay productos en esta sección. <a href="productos.html">Ver todos los productos</a>
+      </p>
     </div>
   </main>
+
+  <template id="product-card-template">
+    <li class="product-grid__item">
+      <a class="product-card" data-item-link>
+        <div class="product-card__media">
+          <img class="product-card__image" data-image alt="" width="600" height="600" loading="lazy">
+          <ul class="product-card__badges" data-badges></ul>
+        </div>
+        <h2 class="product-card__name" data-name></h2>
+        <p class="product-card__meta" data-meta></p>
+        <p class="product-card__price">
+          <span class="visually-hidden">Precio:</span>
+          <span class="product-card__price-current" data-price></span>
+          <span data-original-wrap>
+            <span class="visually-hidden">Precio anterior:</span>
+            <s class="product-card__price-original" data-original-price></s>
+          </span>
+        </p>
+      </a>
+    </li>
+  </template>
   
   <footer class="site-footer">
     <div class="container">
